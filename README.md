@@ -1,6 +1,8 @@
 # ollvm-tapir
 
-This fork of ollvm adds support for the extra instructions added by [LLVM-Tapir](https://github.com/wsmoses/Parallel-IR).
+This fork of ollvm adds support for the extra instructions added by [LLVM-Tapir](https://github.com/wsmoses/Parallel-IR). It adds the `detach`, `reattach`, and `sync` instructions to ollvm.
+
+The original README.md for ollvm is below:
 
 # ollvm 0.99
 

@@ -1,3 +1,7 @@
+# ollvm-tapir
+
+This fork of ollvm adds support for the extra instructions added by [LLVM-Tapir](https://github.com/wsmoses/Parallel-IR).
+
 # ollvm 0.99
 
 ollvm library offers an interface to manipulate LLVM IR in pure OCaml.

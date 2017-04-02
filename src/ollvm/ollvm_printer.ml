@@ -382,6 +382,15 @@ and instr : t -> Format.formatter -> Ollvm_ast.instr -> unit =
 
   | INSTR_Br_1 (t, i)       -> fprintf ppf "br %a %a" typ t (ident env) i
 
+  | INSTR_Detach (i1, i2) ->
+      fprintf ppf "detach %a, %a" (tident env) i1 (tident env) i2
+
+  | INSTR_Reattach i ->
+      fprintf ppf "reattach %a" (tident env) i
+
+  | INSTR_Sync i ->
+      fprintf ppf "sync %a" (tident env) i
+
   | INSTR_Switch (c, def, cases) ->
      fprintf ppf "switch %a, %a [%a]"
              (tvalue env) c

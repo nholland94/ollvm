@@ -152,6 +152,15 @@ module Instr = struct
   let br1 (t, Ollvm_ast.VALUE_Ident branch) =
     Ollvm_ast.INSTR_Br_1 (t, branch)
 
+  let detach (t, Ollvm_ast.VALUE_Ident det_branch) (t', Ollvm_ast.VALUE_Ident cont_branch) =
+    Ollvm_ast.INSTR_Detach ((t, det_branch), (t', cont_branch))
+
+  let reattach (t, Ollvm_ast.VALUE_Ident branch) =
+    Ollvm_ast.INSTR_Reattach ((t, branch))
+
+  let sync (t, Ollvm_ast.VALUE_Ident branch) =
+    Ollvm_ast.INSTR_Sync ((t, branch))
+
   let switch sw default cases =
     let cases = List.map (fun (v, i) -> (v, ident i)) cases in
     Ollvm_ast.INSTR_Switch (sw, ident default, cases)

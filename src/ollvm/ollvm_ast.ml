@@ -197,6 +197,9 @@ and value =
   | INSTR_Ret_void
   | INSTR_Br of tvalue * tident * tident (*types are constant *)
   | INSTR_Br_1 of tident
+  | INSTR_Detach of tident * tident
+  | INSTR_Reattach of tident
+  | INSTR_Sync of tident
   | INSTR_Switch of tvalue * tident * (tvalue * tident) list
   | INSTR_IndirectBr of tvalue * tident list (* address
                                               * possible addresses (labels) *)

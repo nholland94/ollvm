@@ -1,10 +1,10 @@
 opam-version: "1.2"
-maintainer: "Julien Sagot <ju.sagot@gmail.com>"
-author: "Julien Sagot <ju.sagot@gmail.com>"
-name: "ollvm"
+maintainer: "Nathan Holland <nholland94@gmail.com>"
+author: "Julien Sagot <ju.sagot@gmail.com>, Nathan Holland <nholland94@gmail.com>"
+name: "ollvm-tapir"
 version: "0.99"
-homepage: "sagotch.github.io/ollvm/"
-bug-reports: "https://github.com/OCamlPro/ollvm/issues"
+homepage: "https://github.com/nholland94/ollvm-tapir"
+bug-reports: "https://github.com/nholland94/ollvm-tapir/issues"
 license: "LGPL"
 available: [ ocaml-version >= "4.02" ]
 build: [

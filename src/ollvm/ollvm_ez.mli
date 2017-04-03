@@ -165,8 +165,19 @@ module Instr : sig
       depending on the value of [cond]. *)
   val br : Value.t -> Value.t -> Value.t -> Ollvm_ast.instr
 
- (** [br1 label] jumps to [label]. *)
+  (** [br1 label] jumps to [label]. *)
   val br1 : Value.t -> Ollvm_ast.instr
+
+  (** [detach detachment_label continuation_label] detaches [detachment_label]
+      from [continuation_label]. *)
+  val detach : Value.t -> Value.t -> Ollvm_ast.instr
+
+  (** [reattach label] reattaches detached block to [label] *)
+  val reattach : Value.t -> Ollvm_ast.instr
+
+  (** [sync label] syncs a continuation block with a reattachment after detach
+      is called, jumping to [label] afterwards *)
+  val sync : Value.t -> Ollvm_ast.instr
 
   (** [switch cond default [(int1, labelN); ... ; (intN, labelN)]]
       jumps to the [labelX] whose associted [intX] is equal to [cond].

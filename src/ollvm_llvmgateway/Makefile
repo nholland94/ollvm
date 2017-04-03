@@ -1,3 +1,4 @@
+PACKAGE_NAME=ollvm-tapir_llvmgateway
 LIBNAME=ollvm_llvmgateway
 
 SOURCES = $(LIBNAME).ml

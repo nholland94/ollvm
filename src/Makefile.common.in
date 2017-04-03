@@ -88,7 +88,7 @@ doc: $(BYTE)
 	$(CAMLDOC) -d $(DOCDIR) -I . -html *.mli
 
 install: $(BYTE) $(NATIVE) $(CMI)
-	$(OCAMLFIND) install $(LIBNAME) META $^
+	$(OCAMLFIND) install $(PACKAGE_NAME) META $^
 
 uninstall:
-	ocamlfind remove $(LIBNAME)
+	ocamlfind remove $(PACKAGE_NAME)

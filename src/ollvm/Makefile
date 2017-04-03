@@ -1,3 +1,4 @@
+PACKAGE_NAME=ollvm-tapir
 LIBNAME=ollvm
 
 SOURCES = \
